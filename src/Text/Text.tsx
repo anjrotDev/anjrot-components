@@ -46,7 +46,7 @@ const textStyles = cva("w-full", {
 
 type TextProps<C extends ElementType> = PolymorphicComponentPropsWithRef<C, VariantProps<typeof textStyles>>;
 
-type TextComponent = <C extends ElementType = "p">(prop: TextProps<C>) => ReactElement | null;
+type TextComponent = <C extends ElementType = "span">(prop: TextProps<C>) => ReactElement | null;
 
 // export const Text: FC<TextProps> = forwardRef<HTMLParagraphElement, TextProps>(
 //   ({ children, emphasis, size, weight, align, italic, underline, className, ...props }, ref) => {
@@ -59,11 +59,11 @@ type TextComponent = <C extends ElementType = "p">(prop: TextProps<C>) => ReactE
 // );
 
 export const Text: TextComponent = forwardRef(
-  <C extends ElementType = "p">(
+  <C extends ElementType = "span">(
     { as, children, emphasis, size, weight, align, italic, underline, className, ...props }: TextProps<C>,
     ref?: PolymorphicRef<C>
   ) => {
-    const Component = as || "p";
+    const Component = as || "span";
 
     return (
       <Component className={cn(textStyles({ emphasis, size, weight, align, italic, underline }), className)} {...props} ref={ref}>
