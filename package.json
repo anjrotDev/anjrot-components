@@ -14,6 +14,34 @@
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "release": {
+    "branches": [
+      "master",
+      "next"
+    ]
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    "@semantic-release/npm",
+    "@semantic-release/github",
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "package.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -28,6 +56,8 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@storybook/addon-essentials": "^8.2.6",
     "@storybook/addon-interactions": "^8.2.6",
     "@storybook/addon-links": "^8.2.6",
@@ -52,6 +82,7 @@
     "postcss": "^8.4.39",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "semantic-release": "^24.0.0",
     "storybook": "^8.2.6",
     "tailwind-merge": "^2.4.0",
     "tailwindcss": "^3.4.6",
