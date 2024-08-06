@@ -1,6 +1,6 @@
 {
   "name": "anjrot-components",
-  "version": "1.0.3",
+  "version": "1.2.0",
   "type": "module",
   "files": [
     "dist"
