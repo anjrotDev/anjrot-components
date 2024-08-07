@@ -9,9 +9,19 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
     "@storybook/addon-interactions"
   ],
+  core: {
+    builder: "@storybook/builder-vite"
+  },
   framework: {
     name: "@storybook/react-vite",
     options: {}
+  },
+  async viteFinal(config) {
+    config.optimizeDeps = {
+      ...(config.optimizeDeps || {}),
+      exclude: ["vite-plugin-dts"]
+    };
+    return config;
   }
 };
 export default config;

@@ -48,7 +48,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "STORYBOOK_BUILD=true storybook build",
     "commit": "cz"
   },
   "peerDependencies": {
