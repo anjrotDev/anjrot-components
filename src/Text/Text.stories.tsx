@@ -7,7 +7,14 @@ const meta: Meta<typeof Text> = {
   parameters: {
     layout: "centered"
   },
-  tags: ["autodocs"]
+  tags: ["autodocs"],
+  argTypes: {
+    ref: {
+      table: {
+        disable: true
+      }
+    }
+  }
 };
 
 export default meta;
