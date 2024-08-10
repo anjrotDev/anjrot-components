@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/anjrotDev/anjrot-components/compare/v1.4.0...v1.4.1) (2024-08-10)
+
+
+### Bug Fixes
+
+* **text component:** fixing the ref attribute showing on storybook ([8560415](https://github.com/anjrotDev/anjrot-components/commit/85604152437e0f7358f142eefecd5876dc1402ae))
+
 # [1.4.0](https://github.com/anjrotDev/anjrot-components/compare/v1.3.0...v1.4.0) (2024-08-10)
 
 
