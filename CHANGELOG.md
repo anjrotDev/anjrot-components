@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/anjrotDev/anjrot-components/compare/v1.3.0...v1.4.0) (2024-08-10)
+
+
+### Features
+
+* **input component:** new Input Component ([2784e0a](https://github.com/anjrotDev/anjrot-components/commit/2784e0a42d31d2034bb4886ed9979d45fc730072)), closes [#1](https://github.com/anjrotDev/anjrot-components/issues/1)
+
 # [1.3.0](https://github.com/anjrotDev/anjrot-components/compare/v1.2.0...v1.3.0) (2024-08-07)
 
 
