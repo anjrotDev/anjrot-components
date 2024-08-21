@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/anjrotDev/anjrot-components/compare/v1.4.1...v1.5.0) (2024-08-21)
+
+
+### Features
+
+* **input:** validated Input component 1rst style ([e7e7e3e](https://github.com/anjrotDev/anjrot-components/commit/e7e7e3e995f97f1b7fffe811a31099d6e2e44f74))
+
 ## [1.4.1](https://github.com/anjrotDev/anjrot-components/compare/v1.4.0...v1.4.1) (2024-08-10)
 
 
