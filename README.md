@@ -6,7 +6,7 @@ This project is a React component library created for a YouTube tutorial. It dem
 
 This project was created as part of a YouTube tutorial. To learn how to build your own React component library step-by-step watch the video.
 
-[![React Typescript: Crea una libreria de Componentes](https://img.youtube.com/vi/9CU4jkxm-Ps/maxresdefault.jpg)](https://youtube.com/playlist?list=PLoOnCUvhzJYPbtVpYCqP98DoN0pKKImQo&si=wprpLVhejPrMa6YU "React Typescript: Crea una libreria de Componentes")
+[![React Typescript: Crea una libreria de Componentes](https://img.youtube.com/vi/9CU4jkxm-Ps/maxresdefault.jpg)](https://www.youtube.com/playlist?list=PLoOnCUvhzJYOk_s-NQOeWdzPaYmXZGzDj "React Typescript: Crea una libreria de Componentes")
 
 ## 🚀 Quick Start
 
