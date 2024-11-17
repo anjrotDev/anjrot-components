@@ -60,6 +60,10 @@ For a detailed list of changes and version updates, please refer to our [CHANGEL
 
 Thank you to all the contributors who have helped make this project possible!
 
+## 🛎️ Announcements
+
+- Will use this Library for our newest Video Tutorials.
+
 ---
 
 Made with ❤️ for the YouTube community
