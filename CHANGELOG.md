@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/anjrotDev/anjrot-components/compare/v1.5.0...v1.6.0) (2024-11-17)
+
+
+### Features
+
+* **Upgrating:** Upgrating library to work with Next Js 15 ([88abe90](https://github.com/anjrotDev/anjrot-components/commit/88abe90fa274d916aba282c0ba86774efdd2c79d))
+
 # [1.5.0](https://github.com/anjrotDev/anjrot-components/compare/v1.4.1...v1.5.0) (2024-08-21)
 
 
