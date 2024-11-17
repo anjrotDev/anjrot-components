@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/anjrotDev/anjrot-components/compare/v1.6.1...v1.7.0) (2024-11-17)
+
+
+### Features
+
+* **Testing:** Testing release ([d23c2ae](https://github.com/anjrotDev/anjrot-components/commit/d23c2aef2a96f2583244ea841485d26b2ad0c300))
+
 # [1.6.0](https://github.com/anjrotDev/anjrot-components/compare/v1.5.0...v1.6.0) (2024-11-17)
 
 
