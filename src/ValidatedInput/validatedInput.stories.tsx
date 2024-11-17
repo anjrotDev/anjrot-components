@@ -3,7 +3,7 @@ import { ValidatedInput, ValidatedInputProps } from "./ValidatedInput";
 
 // Configuración de Storybook para el componente ValidatedInput
 const meta: Meta<typeof ValidatedInput> = {
-  title: "Components/ValidatedInput",
+  title: "Components/New/ValidatedInput",
   component: ValidatedInput,
   tags: ["autodocs"],
   parameters: {
