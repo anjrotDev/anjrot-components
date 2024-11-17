@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/anjrotDev/anjrot-components/compare/v1.7.0...v1.8.0) (2024-11-17)
+
+
+### Features
+
+* **build-process:** Fixing Build Process ([260e6a1](https://github.com/anjrotDev/anjrot-components/commit/260e6a18aec12c4ae7fa7084dd7c15df7ff9159b))
+
 # [1.7.0](https://github.com/anjrotDev/anjrot-components/compare/v1.6.1...v1.7.0) (2024-11-17)
 
 
