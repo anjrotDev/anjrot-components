@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, forwardRef, InputHTMLAttributes, useState } from "react";
 import { cva, VariantProps } from "class-variance-authority";
-import { cn } from "../utils/utils";
+import { cn } from "../../utils/utils";
 
 const inputStyles = cva("w-full p-2 border rounded-md outline-none transition-all", {
   variants: {

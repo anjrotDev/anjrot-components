@@ -1,5 +1,6 @@
 import "./index.css";
-export { Button } from "./Button/Button";
-export type { ButtonProps } from "./Button/Button";
-export { Stack } from "./Stack/Stack";
-export { Text } from "./Text/Text";
+export { Button } from "./Components/Button/Button";
+export type { ButtonProps } from "./Components/Button/Button";
+export { Stack } from "./Layout/Stack/Stack";
+export { Text } from "./Components/Text/Text";
+export { InfoCard } from "./Components/NextTutorial/InfoCard";

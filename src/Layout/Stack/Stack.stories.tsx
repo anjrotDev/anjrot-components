@@ -7,7 +7,7 @@ interface ExampleComponentProps extends ComponentProps<typeof Stack> {
 }
 
 const meta: Meta<ExampleComponentProps> = {
-  title: "Components/Stack",
+  title: "Layout/Stack",
   component: Stack,
   tags: ["autodocs"],
   parameters: {
