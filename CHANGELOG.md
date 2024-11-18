@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/anjrotDev/anjrot-components/compare/v1.8.0...v1.9.0) (2024-11-18)
+
+
+### Features
+
+* **triggering pipelin:** just to trigger a new release ([f55bff0](https://github.com/anjrotDev/anjrot-components/commit/f55bff0cc93a3a216093de2b912851bab17ffdc2))
+
 # [1.8.0](https://github.com/anjrotDev/anjrot-components/compare/v1.7.0...v1.8.0) (2024-11-17)
 
 
