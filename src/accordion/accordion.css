@@ -1,0 +1,63 @@
+:root {
+  --primary-color: #ccc;
+  --secondary-color: #f8f8f8;
+}
+
+body,
+h1,
+h2,
+ul,
+li,
+p {
+  padding: 0;
+  text-wrap: pretty;
+  font-family: "lettera mono";
+}
+
+details {
+  width: 100%;
+  max-height: 60px;
+  /* max-width: 400px;  */
+  margin: 20px auto;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: "lettera mono";
+}
+
+summary {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+summary::before {
+  content: "〉";
+  font-size: 10px;
+  margin-right: 8px;
+  transition: transform 0.5s ease-out;
+}
+
+details>div {
+  padding: 10px;
+  background-color: var(--secondary-color);
+  border-top: 1px solid #ccc;
+}
+
+details[open] {
+  max-height: 400px;
+  transition: max-height 0.6s ease-in-out;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details[open] summary {
+  justify-content: space-between;
+}
