@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/anjrotDev/anjrot-components/compare/v1.9.0...v1.10.0) (2024-11-20)
+
+
+### Features
+
+* **trigger a new pipeline:** Trigger a new pipeline ([32185f1](https://github.com/anjrotDev/anjrot-components/commit/32185f17b8793ea088f57e34e37cde2be2d8bf0b))
+
 # [1.9.0](https://github.com/anjrotDev/anjrot-components/compare/v1.8.0...v1.9.0) (2024-11-18)
 
 
