@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Stack } from "./Stack";
+import { Grid } from "./Grid";
 import { ComponentProps } from "react";
 
-interface StackComponentProps extends ComponentProps<typeof Stack> {
+interface GridComponentProps extends ComponentProps<typeof Grid> {
   childrenQuantity?: number;
 }
 
-const meta: Meta<StackComponentProps> = {
-  title: "Layout/Stack",
-  component: Stack,
+const meta: Meta<GridComponentProps> = {
+  title: "Layout/Grid",
+  component: Grid,
   tags: ["autodocs"],
   argTypes: {
     as: {
@@ -24,23 +24,19 @@ const meta: Meta<StackComponentProps> = {
     direction: {
       control: "select",
       type: "string",
-      options: ["row", "row-reverse", "column", "column-reverse"],
+      options: ["row", "column"],
       description: "Defines the flex direction of the Stack.",
       defaultValue: "row"
     },
-    align: {
-      type: "string",
-      control: "select",
-      options: ["start", "center", "end", "stretch", "baseline"],
-      description: "Aligns items on the cross axis. Remember to use this you have to set a heigh for the cross axis",
-      defaultValue: "stretch"
+    rows: {
+      control: "number",
+      type: "number",
+      description: "Rows numbers if direction is set to rows"
     },
-    alignContent: {
-      type: "string",
-      control: "select",
-      options: ["start", "center", "end", "stretch", "space-between", "space-around", "space-evenly"],
-      description: "Aligns a flex container's lines within it when there is extra space in the cross-axis.",
-      defaultValue: "stretch"
+    cols: {
+      control: "number",
+      type: "number",
+      description: "Columns numbers if direction is set to columns"
     },
     childrenQuantity: {
       control: "number",
@@ -59,27 +55,25 @@ const meta: Meta<StackComponentProps> = {
 };
 
 export default meta;
-type Story = StoryObj<StackComponentProps>;
+type Story = StoryObj<GridComponentProps>;
 
-const StackComponent: Story = {
+const GridComponent: Story = {
   render: ({ childrenQuantity, ...props }) => (
-    <Stack {...props}>
+    <Grid {...props}>
       {[...Array(childrenQuantity).keys()].map(n => (
-        <div key={n} className="w-32 h-10 bg-red-400 flex items-center justify-center text-3xl font-bold">
+        <div key={n} className="w-32 h-10 bg-slate-500 flex items-center justify-center text-3xl font-bold">
           {n + 1}
         </div>
       ))}
-    </Stack>
+    </Grid>
   )
 };
 
 export const Default: Story = {
-  ...StackComponent,
+  ...GridComponent,
   args: {
     gap: 4,
     direction: "row",
-    align: "stretch",
-    alignContent: "stretch",
     childrenQuantity: 3
   }
 };

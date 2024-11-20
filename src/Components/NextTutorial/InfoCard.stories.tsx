@@ -18,8 +18,9 @@ const meta: Meta<typeof InfoCard> = {
     },
     type: {
       type: "string",
-      description: "invoices | customers | pending | collected",
-      control: "select"
+      description: "Renders an icon representing statuses",
+      control: "select",
+      options: ["invoices", "customers", "pending", "collected"]
     },
     currency: {
       description: "Optional a currency Object like {currency: 'USD', locale: 'en-US'}"
