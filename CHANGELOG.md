@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/anjrotDev/anjrot-components/compare/v1.10.0...v1.10.1) (2024-11-20)
+
+
+### Bug Fixes
+
+* **release:** fixing Grid component not exported ([2af0bfc](https://github.com/anjrotDev/anjrot-components/commit/2af0bfcfac7c5dd627c307e6ec987862d93318f9))
+
 # [1.10.0](https://github.com/anjrotDev/anjrot-components/compare/v1.9.0...v1.10.0) (2024-11-20)
 
 
