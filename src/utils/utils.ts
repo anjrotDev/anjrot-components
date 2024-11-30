@@ -1,6 +1,12 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+export type Revenue = {
+  _id: string;
+  month: string;
+  revenue: number;
+};
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
@@ -19,4 +25,16 @@ export const formatCurrency = (amount: number | string, locale?: Locales, curren
     style: "currency",
     currency: currency ? currency : "USD"
   });
+};
+
+export const generateYAxis = (revenue: Revenue[]) => {
+  const yAxisLabels = [];
+  const highestRecord = Math.max(...revenue.map(month => month.revenue));
+  const topLabel = Math.ceil(highestRecord / 1000) * 1000;
+
+  for (let i = topLabel; i >= 0; i -= 1000) {
+    yAxisLabels.push(`$${i / 1000}K`);
+  }
+
+  return { yAxisLabels, topLabel };
 };
