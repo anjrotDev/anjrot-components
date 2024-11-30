@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/anjrotDev/anjrot-components/compare/v1.11.0...v1.11.1) (2024-11-30)
+
+
+### Bug Fixes
+
+* **Exporting the new component:** Exporting the ChartRevenue Component and Revenue Type ([c7335dc](https://github.com/anjrotDev/anjrot-components/commit/c7335dc8404823019da22e82f447e147b03d53c9))
+
 # [1.11.0](https://github.com/anjrotDev/anjrot-components/compare/v1.10.2...v1.11.0) (2024-11-30)
 
 
