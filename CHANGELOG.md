@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/anjrotDev/anjrot-components/compare/v1.10.2...v1.11.0) (2024-11-30)
+
+
+### Features
+
+* **RevenueChart component:** Revenue Chart for the next Js tutorial ([9bf94a6](https://github.com/anjrotDev/anjrot-components/commit/9bf94a646c608b272b96a84ef8c22c5df9744b66))
+
 ## [1.10.2](https://github.com/anjrotDev/anjrot-components/compare/v1.10.1...v1.10.2) (2024-11-30)
 
 
