@@ -23,10 +23,10 @@ interface InfoCardProps extends HTMLAttributes<HTMLDivElement> {
   currency?: CurrencyObj;
 }
 
-export const InfoCard: FC<InfoCardProps> = forwardRef(({ title, value, type, currency, className, ...props }) => {
+export const InfoCard: FC<InfoCardProps> = forwardRef<HTMLDivElement, InfoCardProps>(({ title, value, type, currency, className, ...props }, ref) => {
   const Icon = type && iconMap[type];
   return (
-    <div className={cn("rounded-xl bg-slate-700 text-slate-700 p-2 shadow-sm", className)} {...props}>
+    <div className={cn("rounded-xl bg-slate-700 text-slate-700 p-2 shadow-sm", className)} {...props} ref={ref}>
       <div className="flex p-4">
         {Icon ? <Icon className="h-5 w-5 text-white" /> : null}
         <h3 className="ml-2 text-sm text-white font-medium">{title}</h3>

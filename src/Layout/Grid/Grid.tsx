@@ -22,7 +22,7 @@ const gridStyles = cva("grid w-full", {
   },
   defaultVariants: {
     gap: 2,
-    direction: "column"
+    direction: "row"
   }
 });
 
