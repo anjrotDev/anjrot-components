@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/anjrotDev/anjrot-components/compare/v1.10.1...v1.10.2) (2024-11-30)
+
+
+### Bug Fixes
+
+* **Forward Ref:** Fixing forward ref on infocard. ([6635723](https://github.com/anjrotDev/anjrot-components/commit/663572367aed45b4649b0eb1939c43f41c21220b))
+
 ## [1.10.1](https://github.com/anjrotDev/anjrot-components/compare/v1.10.0...v1.10.1) (2024-11-20)
 
 
