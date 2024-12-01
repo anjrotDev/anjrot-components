@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/anjrotDev/anjrot-components/compare/v1.12.0...v1.12.1) (2024-12-01)
+
+
+### Bug Fixes
+
+* **export search:** Exporting Search input ([ba913e5](https://github.com/anjrotDev/anjrot-components/commit/ba913e5d1850f35f4279d29e1562097d8d1f9c0d))
+
 # [1.12.0](https://github.com/anjrotDev/anjrot-components/compare/v1.11.1...v1.12.0) (2024-12-01)
 
 
