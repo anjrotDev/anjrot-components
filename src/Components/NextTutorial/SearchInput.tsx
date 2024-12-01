@@ -7,7 +7,7 @@ interface SearchInputsProps extends InputHTMLAttributes<HTMLInputElement> {
   defaultValue?: string;
 }
 
-const SearchInput: FC<SearchInputsProps> = forwardRef<HTMLInputElement, SearchInputsProps>(
+export const SearchInput: FC<SearchInputsProps> = forwardRef<HTMLInputElement, SearchInputsProps>(
   ({ placeholder, defaultValue, onChange, className, ...props }) => {
     return (
       <div className="relative flex flex-1 flex-shrink-0">
@@ -26,5 +26,3 @@ const SearchInput: FC<SearchInputsProps> = forwardRef<HTMLInputElement, SearchIn
     );
   }
 );
-
-export default SearchInput;
