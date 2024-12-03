@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/anjrotDev/anjrot-components/compare/v1.13.1...v1.13.2) (2024-12-03)
+
+
+### Bug Fixes
+
+* **Install process:** Adding instructions to install the library ([c8a30ce](https://github.com/anjrotDev/anjrot-components/commit/c8a30cefad5392aa4a3cdfcbf16177c957afda51))
+
 ## [1.13.1](https://github.com/anjrotDev/anjrot-components/compare/v1.13.0...v1.13.1) (2024-12-03)
 
 
