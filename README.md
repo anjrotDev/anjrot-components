@@ -17,8 +17,53 @@ This project was created as part of a YouTube tutorial. To learn how to build yo
    ```
 3. Run the development server:
    ```
-   npm run dev
+   npm run storybook
    ```
+
+## 🏗️ Install in Another Project
+
+To use this library in another project, follow these steps:
+
+### Install the library
+
+Add the library to your project as a dependency using npm or yarn:
+
+```bash
+npm install anjrot-components
+# or
+yarn add anjrot-components
+```
+
+### 🛠️ Tailwind CSS Setup
+
+To use this library in your project, make sure Tailwind CSS processes the classes in the components provided by the library. Add the following line to the `content` section of your `tailwind.config.js`:
+
+```javascript
+content: ["./node_modules/anjrot-components/**/*.{js,ts,jsx,tsx}"],
+```
+
+### Import and use the components
+
+Now you can import and use components from the library in your project. For example:
+
+```tsx
+import { Button, Input, Stack } from "anjrot-components";
+
+export default function MyComponent() {
+  return (
+    <div>
+      <Button onClick={() => alert("Clicked!")}>Click Me</Button>
+      <Input placeholder="Enter your text here" />
+      <Stack gap={4}>
+        <div>Item 1</div>
+        <div>Item 2</div>
+      </Stack>
+    </div>
+  );
+}
+```
+
+Restart your development server after making these changes to ensure Tailwind CSS processes the classes correctly.
 
 ## 🧱 Components
 
