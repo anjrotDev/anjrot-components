@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/anjrotDev/anjrot-components/compare/v1.13.0...v1.13.1) (2024-12-03)
+
+
+### Bug Fixes
+
+* **tailwind ccs:** Tailwind css as dev dependencie ([182950a](https://github.com/anjrotDev/anjrot-components/commit/182950af2fde35674cc54cbdab77beae210a5dc7))
+
 # [1.13.0](https://github.com/anjrotDev/anjrot-components/compare/v1.12.1...v1.13.0) (2024-12-02)
 
 
