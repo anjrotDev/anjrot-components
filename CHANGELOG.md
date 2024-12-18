@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/anjrotDev/anjrot-components/compare/v1.13.2...v1.14.0) (2024-12-18)
+
+
+### Features
+
+* **new next tutorial component:** Pagination component ([6e36898](https://github.com/anjrotDev/anjrot-components/commit/6e3689877c386c00dcad343de877cb037cba6286))
+
 ## [1.13.2](https://github.com/anjrotDev/anjrot-components/compare/v1.13.1...v1.13.2) (2024-12-03)
 
 
