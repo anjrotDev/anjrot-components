@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/anjrotDev/anjrot-components/compare/v1.14.0...v1.14.1) (2024-12-18)
+
+
+### Bug Fixes
+
+* **exporting pagination:** Exporting Pagination ([bb429c1](https://github.com/anjrotDev/anjrot-components/commit/bb429c1971ce44dcd2b86a4beabb9b40ffe7153a))
+
 # [1.14.0](https://github.com/anjrotDev/anjrot-components/compare/v1.13.2...v1.14.0) (2024-12-18)
 
 
