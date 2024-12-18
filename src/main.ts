@@ -10,6 +10,7 @@ export { SearchInput } from "./Components/NextTutorial/SearchInput";
 export { StatusIcon } from "./Components/NextTutorial/StatusIcon";
 export { TableButtons } from "./Components/NextTutorial/TableButtons";
 export { InvoiceTable } from "./Components/NextTutorial/InvoiceTable";
+export { Pagination } from "./Components/NextTutorial/Pagination";
 
 // Export types if needed
 export type { ButtonProps } from "./Components/Button/Button";
