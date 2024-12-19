@@ -109,7 +109,7 @@ Thank you to all the contributors who have helped make this project possible!
 
 - Will use this Library for our newest Video Tutorials.
 
-- Trigger pipeline
+- Trigger pipeline Pagination component
 
 ---
 
