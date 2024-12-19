@@ -1,18 +1,41 @@
-import { ElementType, FC } from "react";
-import { cn, generatePagination } from "../../utils/utils";
+import { AnchorHTMLAttributes, ElementType, FC } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { cn, generatePagination } from "../../utils/utils";
 
 interface IPagination {
-  href: string;
   AnchorElement?: ElementType;
 }
 
-interface PaginationArrowsProps extends IPagination {
-  direction?: "left" | "right";
+interface PaginationNumberProps extends IPagination, AnchorHTMLAttributes<HTMLAnchorElement> {
+  page: number | string;
+  position?: "first" | "last" | "middle" | "single";
+  isActive: boolean;
+}
+
+const PaginationNumber: FC<PaginationNumberProps> = ({ page, position, isActive, AnchorElement = "a", href, ...props }) => {
+  const className = cn("flex h-10 w-10 items-center justify-center text-sm border", {
+    "rounded-l-md": position === "first" || position === "single",
+    "rounded-r-md": position === "last" || position === "single",
+    "z-10 bg-blue-600 border-blue-600 text-white": isActive,
+    "hover:bg-gray-100": !isActive && position !== "middle",
+    "text-gray-300": position === "middle"
+  });
+
+  return isActive || position === "middle" ? (
+    <div className={className}>{page}</div>
+  ) : (
+    <AnchorElement href={href} className={className} {...props}>
+      {page}
+    </AnchorElement>
+  );
+};
+
+interface PaginationArrowProps extends IPagination, AnchorHTMLAttributes<HTMLAnchorElement> {
+  direction: "left" | "right";
   isDisabled?: boolean;
 }
 
-const PaginationArrow: FC<PaginationArrowsProps> = ({ href, direction, AnchorElement = "a", isDisabled }) => {
+const PaginationArrow: FC<PaginationArrowProps> = ({ direction, isDisabled, AnchorElement = "a", href, ...props }) => {
   const className = cn("flex h-10 w-10 items-center justify-center rounded-md border", {
     "pointer-events-none text-gray-300": isDisabled,
     "hover:bg-gray-100": !isDisabled,
@@ -25,32 +48,8 @@ const PaginationArrow: FC<PaginationArrowsProps> = ({ href, direction, AnchorEle
   return isDisabled ? (
     <div className={className}>{icon}</div>
   ) : (
-    <AnchorElement className={className} href={href}>
+    <AnchorElement className={className} href={href} {...props}>
       {icon}
-    </AnchorElement>
-  );
-};
-
-interface PaginationNumbersProps extends IPagination {
-  page: number | string;
-  isActive: boolean;
-  position?: "first" | "last" | "middle" | "single";
-}
-
-const PaginationNumber: FC<PaginationNumbersProps> = ({ page, href, isActive, position, AnchorElement = "a" }) => {
-  const className = cn("flex h-10 w-10 items-center justify-center text-sm border", {
-    "rounded-l-md": position === "first" || position === "single",
-    "rounded-r-md": position === "last" || position === "single",
-    "z-10 bg-blue-600 border-blue-600 text-white": isActive,
-    "hover:bg-gray-100": !isActive && position !== "middle",
-    "text-gray-300": position === "middle"
-  });
-
-  return isActive || position === "middle" ? (
-    <div className={className}>{page}</div>
-  ) : (
-    <AnchorElement href={href} className={className}>
-      {page}
     </AnchorElement>
   );
 };
@@ -58,16 +57,31 @@ const PaginationNumber: FC<PaginationNumbersProps> = ({ page, href, isActive, po
 interface PaginationProps extends IPagination {
   totalPages: number;
   currentPage: number;
+  createPageURL: (pageNumber: number | string) => string;
+  paginationNumberOnClick?: () => void;
+  paginationArrowOnClick?: () => void;
 }
-export const Pagination: FC<PaginationProps> = ({ totalPages, href, currentPage, AnchorElement = "a" }) => {
+
+export const Pagination: FC<PaginationProps> = ({
+  totalPages,
+  currentPage,
+  AnchorElement = "a",
+  createPageURL,
+  paginationArrowOnClick,
+  paginationNumberOnClick
+}) => {
   const allPages = generatePagination(currentPage, totalPages);
 
   return (
     <>
-      {/*  NOTE: Uncomment this code in Chapter 11 */}
-
       <div className="inline-flex">
-        <PaginationArrow direction="left" href={href} isDisabled={currentPage <= 1} AnchorElement={AnchorElement} />
+        <PaginationArrow
+          direction="left"
+          href={createPageURL(currentPage - 1)}
+          isDisabled={currentPage <= 1}
+          AnchorElement={AnchorElement}
+          onClick={paginationArrowOnClick}
+        />
 
         <div className="flex -space-x-px">
           {allPages.map((page, index) => {
@@ -81,17 +95,23 @@ export const Pagination: FC<PaginationProps> = ({ totalPages, href, currentPage,
             return (
               <PaginationNumber
                 key={page}
-                href={href}
+                href={createPageURL(page)}
                 page={page}
                 position={position}
                 isActive={currentPage === page}
                 AnchorElement={AnchorElement}
+                onClick={paginationNumberOnClick}
               />
             );
           })}
         </div>
 
-        <PaginationArrow direction="right" href={href} isDisabled={currentPage >= totalPages} AnchorElement={AnchorElement} />
+        <PaginationArrow
+          direction="right"
+          href={createPageURL(currentPage + 1)}
+          isDisabled={currentPage >= totalPages}
+          AnchorElement={AnchorElement}
+        />
       </div>
     </>
   );

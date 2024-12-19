@@ -17,7 +17,6 @@ type Story = StoryObj<typeof meta>;
 
 export const SimulatedPagination: Story = {
   render: args => {
-    console.log("args :>> ", args);
     const [currentPage, setCurrentPage] = useState(args.currentPage);
 
     const handlePageChange = (page: number) => {
@@ -27,19 +26,19 @@ export const SimulatedPagination: Story = {
       }
     };
 
-    const customHref = () => {
-      return `#page=${currentPage}`;
+    const createPageURL = (pageNumber: number | string) => {
+      return `#page=${pageNumber}`;
     };
 
     return (
       <Pagination
         {...args}
         currentPage={currentPage}
-        href={customHref()}
+        createPageURL={createPageURL}
         AnchorElement={({ href, children, ...rest }) => (
           <a
             {...rest}
-            href={href}
+            href={createPageURL}
             onClick={e => {
               e.preventDefault();
               console.log("e.target :>> ", e.currentTarget.innerHTML);
@@ -54,7 +53,6 @@ export const SimulatedPagination: Story = {
     );
   },
   args: {
-    href: "#",
     totalPages: 40,
     currentPage: 1
   }
