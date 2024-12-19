@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/anjrotDev/anjrot-components/compare/v1.14.1...v1.14.2) (2024-12-19)
+
+
+### Bug Fixes
+
+* **pagination component:** trigger pagination component fix ([103a79a](https://github.com/anjrotDev/anjrot-components/commit/103a79a84c9b69a134d28d73792094a076129203))
+
 ## [1.14.1](https://github.com/anjrotDev/anjrot-components/compare/v1.14.0...v1.14.1) (2024-12-18)
 
 
