@@ -1,8 +1,8 @@
 import { ElementType, FC, FormHTMLAttributes } from "react";
 import { FaRegUserCircle, FaRegClock, FaCheck } from "react-icons/fa";
 import { CiDollar } from "react-icons/ci";
-import { TableButtons } from "anjrot-components";
 import { cn } from "../../utils/utils";
+import { TableButtons } from "./TableButtons";
 
 export type CustomerField = {
   _id: string;
