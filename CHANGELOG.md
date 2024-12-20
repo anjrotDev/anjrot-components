@@ -1,3 +1,11 @@
+# [1.15.0](https://github.com/anjrotDev/anjrot-components/compare/v1.14.2...v1.15.0) (2024-12-20)
+
+
+### Features
+
+* **New Components:** New components for next tutorial ([49b4af3](https://github.com/anjrotDev/anjrot-components/commit/49b4af332ddc8a44ea21678a2d3a8281770f076e))
+* **new components:** New components for the Next Tutorial ([6410818](https://github.com/anjrotDev/anjrot-components/commit/6410818d61eeb0f7c3f53d4f8784f62861013dcb))
+
 ## [1.14.2](https://github.com/anjrotDev/anjrot-components/compare/v1.14.1...v1.14.2) (2024-12-19)
 
 
