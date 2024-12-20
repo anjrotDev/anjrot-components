@@ -27,10 +27,10 @@ interface CreateFormProps extends FormHTMLAttributes<HTMLFormElement> {
 export const CreateForm: FC<CreateFormProps> = ({ customers, state, className, AnchorElement = "a", action, ...props }) => {
   return (
     <form action={action} {...props}>
-      <div className={cn("rounded-md bg-gray-50 p-4 md:p-6", className)}>
+      <div className={cn("rounded-md bg-slate-700 p-4 md:p-6", className)}>
         {/* Customer Name */}
         <div className="mb-4">
-          <label htmlFor="customer" className="mb-2 block text-sm font-medium">
+          <label htmlFor="customer" className="mb-2 block text-sm font-medium text-slate-200">
             Choose customer
           </label>
           <div className="relative">
@@ -64,7 +64,7 @@ export const CreateForm: FC<CreateFormProps> = ({ customers, state, className, A
 
         {/* Invoice Amount */}
         <div className="mb-4">
-          <label htmlFor="amount" className="mb-2 block text-sm font-medium">
+          <label htmlFor="amount" className="mb-2 block text-sm font-medium text-slate-200">
             Choose an amount
           </label>
           <div className="relative mt-2 rounded-md">
@@ -93,7 +93,7 @@ export const CreateForm: FC<CreateFormProps> = ({ customers, state, className, A
 
         {/* Invoice Status */}
         <fieldset>
-          <legend className="mb-2 block text-sm font-medium">Set the invoice status</legend>
+          <legend className="mb-2 block text-sm font-medium text-slate-200">Set the invoice status</legend>
           <div className="rounded-md border border-gray-200 bg-white px-[14px] py-3">
             <div className="flex gap-4">
               <div className="flex items-center">

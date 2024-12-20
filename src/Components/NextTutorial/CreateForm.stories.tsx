@@ -201,7 +201,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     customers: customers,
-    state: state,
-    className: "bg-slate-700 text-white"
+    state: state
   }
 };
