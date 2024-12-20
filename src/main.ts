@@ -11,9 +11,12 @@ export { StatusIcon } from "./Components/NextTutorial/StatusIcon";
 export { TableButtons } from "./Components/NextTutorial/TableButtons";
 export { InvoiceTable } from "./Components/NextTutorial/InvoiceTable";
 export { Pagination } from "./Components/NextTutorial/Pagination";
+export { Breadcrumbs } from "./Components/NextTutorial/Breadcrumb";
+export { CreateForm } from "./Components/NextTutorial/CreateForm";
 
 // Export types if needed
 export type { ButtonProps } from "./Components/Button/Button";
 export type { InvoicesProps } from "./Components/NextTutorial/LastInvoices";
 export type { InvoiceObj } from "./Components/NextTutorial/InvoiceTable";
+export type { CreateFormState, CustomerField } from "./Components/NextTutorial/CreateForm";
 export type { Revenue } from "./utils/utils";
