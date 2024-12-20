@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/anjrotDev/anjrot-components/compare/v1.15.0...v1.15.1) (2024-12-20)
+
+
+### Bug Fixes
+
+* **form colors:** Fixing form colors ([54459ff](https://github.com/anjrotDev/anjrot-components/commit/54459ff93790a9eac25e28e8bb98c9592006e7bd))
+
 # [1.15.0](https://github.com/anjrotDev/anjrot-components/compare/v1.14.2...v1.15.0) (2024-12-20)
 
 
