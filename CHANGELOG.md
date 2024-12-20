@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/anjrotDev/anjrot-components/compare/v1.15.1...v1.15.2) (2024-12-20)
+
+
+### Bug Fixes
+
+* **button element:** fixing submit button ([9e7d57e](https://github.com/anjrotDev/anjrot-components/commit/9e7d57efeed4ffb90918741a52a8d9b197da6c96))
+
 ## [1.15.1](https://github.com/anjrotDev/anjrot-components/compare/v1.15.0...v1.15.1) (2024-12-20)
 
 
