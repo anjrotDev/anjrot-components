@@ -149,7 +149,7 @@ export const CreateForm: FC<CreateFormProps> = ({ customers, state, className, A
         >
           Cancel
         </AnchorElement>
-        <TableButtons type="submit" title="Create Invoice" />
+        <TableButtons type="submit" title="Create Invoice" ButtonType={"button"} />
       </div>
     </form>
   );
