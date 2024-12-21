@@ -4,6 +4,13 @@ import { CiDollar } from "react-icons/ci";
 import { cn } from "../../utils/utils";
 import { TableButtons } from "./TableButtons";
 
+export type InvoiceForm = {
+  id: string;
+  customer_id: string;
+  amount: number;
+  status: "pending" | "paid";
+};
+
 export type CustomerField = {
   _id: string;
   name: string;
@@ -21,12 +28,14 @@ export type CreateFormState = {
 interface CreateFormProps extends FormHTMLAttributes<HTMLFormElement> {
   customers: CustomerField[];
   state: CreateFormState;
+  invoice?: InvoiceForm;
   AnchorElement?: ElementType;
 }
 
-export const CreateForm: FC<CreateFormProps> = ({ customers, state, className, AnchorElement = "a", action, ...props }) => {
+export const CreateForm: FC<CreateFormProps> = ({ customers, state, invoice, className, AnchorElement = "a", action, ...props }) => {
   return (
     <form action={action} {...props}>
+      {invoice && <input type="hidden" name="invoiceId" value={invoice.id} />}
       <div className={cn("rounded-md bg-slate-700 p-4 md:p-6", className)}>
         {/* Customer Name */}
         <div className="mb-4">
@@ -38,7 +47,7 @@ export const CreateForm: FC<CreateFormProps> = ({ customers, state, className, A
               id="customer"
               name="customerId"
               className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
-              defaultValue=""
+              defaultValue={invoice ? invoice.customer_id : ""}
               aria-describedby="customer-error"
             >
               <option value="" disabled>
@@ -74,6 +83,7 @@ export const CreateForm: FC<CreateFormProps> = ({ customers, state, className, A
                 name="amount"
                 type="number"
                 step="0.01"
+                defaultValue={invoice ? invoice.amount : undefined}
                 placeholder="Enter USD amount"
                 className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
                 aria-describedby="amount-error"
@@ -102,6 +112,7 @@ export const CreateForm: FC<CreateFormProps> = ({ customers, state, className, A
                   name="status"
                   type="radio"
                   value="pending"
+                  defaultChecked={invoice && invoice.status === "pending"}
                   className="h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2"
                 />
                 <label
@@ -117,6 +128,7 @@ export const CreateForm: FC<CreateFormProps> = ({ customers, state, className, A
                   name="status"
                   type="radio"
                   value="paid"
+                  defaultChecked={invoice && invoice.status === "paid"}
                   className="h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2"
                 />
                 <label
@@ -149,7 +161,7 @@ export const CreateForm: FC<CreateFormProps> = ({ customers, state, className, A
         >
           Cancel
         </AnchorElement>
-        <TableButtons type="submit" title="Create Invoice" ButtonType={"button"} />
+        <TableButtons type="submit" title={invoice ? "Update Invoice" : "Create Invoice"} ButtonType={"button"} />
       </div>
     </form>
   );

@@ -18,5 +18,5 @@ export { CreateForm } from "./Components/NextTutorial/CreateForm";
 export type { ButtonProps } from "./Components/Button/Button";
 export type { InvoicesProps } from "./Components/NextTutorial/LastInvoices";
 export type { InvoiceObj } from "./Components/NextTutorial/InvoiceTable";
-export type { CreateFormState, CustomerField } from "./Components/NextTutorial/CreateForm";
+export type { CreateFormState, CustomerField, InvoiceForm } from "./Components/NextTutorial/CreateForm";
 export type { Revenue } from "./utils/utils";
