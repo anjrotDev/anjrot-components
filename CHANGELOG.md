@@ -1,3 +1,10 @@
+## [1.15.3](https://github.com/anjrotDev/anjrot-components/compare/v1.15.2...v1.15.3) (2024-12-21)
+
+
+### Bug Fixes
+
+* **components:** Fixing Next tutorial components to get the invoice id automatically ([c75b14f](https://github.com/anjrotDev/anjrot-components/commit/c75b14fbb647a1e106128650681bffce4afadf68))
+
 ## [1.15.2](https://github.com/anjrotDev/anjrot-components/compare/v1.15.1...v1.15.2) (2024-12-20)
 
 
