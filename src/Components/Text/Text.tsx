@@ -1,7 +1,7 @@
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "../../utils/utils";
-import { ElementType, forwardRef, ReactElement } from "react";
-import { PolymorphicComponentPropsWithRef, PolymorphicRef } from "../../utils/polmorphicsTypes";
+import { ElementType, forwardRef, ReactElement, Ref } from "react";
+import { PolymorphicComponentPropsWithRef } from "../../utils/polmorphicsTypes";
 
 const textStyles = cva("w-full", {
   variants: {
@@ -42,33 +42,19 @@ const textStyles = cva("w-full", {
   }
 });
 
-// interface TextProps extends HTMLAttributes<HTMLParagraphElement>, VariantProps<typeof textStyles> {}
+type TextProps<C extends ElementType = "p"> = PolymorphicComponentPropsWithRef<C, VariantProps<typeof textStyles>>;
 
-type TextProps<C extends ElementType> = PolymorphicComponentPropsWithRef<C, VariantProps<typeof textStyles>>;
+type TextComponent = <C extends ElementType = "p">(props: TextProps<C>) => ReactElement | null;
 
-type TextComponent = <C extends ElementType = "p">(prop: TextProps<C>) => ReactElement | null;
+export const Text: TextComponent = forwardRef(function Text<C extends ElementType = "p">(
+  { as, children, emphasis, size, weight, align, italic, underline, className, ...props }: TextProps<C>,
+  ref: Ref<HTMLParagraphElement>
+) {
+  const Component = as || "p";
 
-// export const Text: FC<TextProps> = forwardRef<HTMLParagraphElement, TextProps>(
-//   ({ children, emphasis, size, weight, align, italic, underline, className, ...props }, ref) => {
-//     return (
-//       <p className={cn(textStyles({ emphasis, size, weight, align, italic, underline }), className)} {...props} ref={ref}>
-//         {children}
-//       </p>
-//     );
-//   }
-// );
-
-export const Text: TextComponent = forwardRef(
-  <C extends ElementType = "p">(
-    { as, children, emphasis, size, weight, align, italic, underline, className, ...props }: TextProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
-    const Component = as || "p";
-
-    return (
-      <Component className={cn(textStyles({ emphasis, size, weight, align, italic, underline }), className)} {...props} ref={ref}>
-        {children}
-      </Component>
-    );
-  }
-) as TextComponent;
+  return (
+    <Component className={cn(textStyles({ emphasis, size, weight, align, italic, underline }), className)} {...props} ref={ref}>
+      {children}
+    </Component>
+  );
+}) as TextComponent;

@@ -1,9 +1,8 @@
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "../../utils/utils";
-import { ElementType, forwardRef, ReactElement } from "react";
-import { PolymorphicComponentPropsWithRef, PolymorphicRef } from "../../utils/polmorphicsTypes";
+import { ElementType, forwardRef, ReactElement, Ref } from "react";
+import { PolymorphicComponentPropsWithRef } from "../../utils/polmorphicsTypes";
 
-// Define styles with cva
 const gridStyles = cva("grid w-full", {
   variants: {
     gap: {
@@ -26,8 +25,7 @@ const gridStyles = cva("grid w-full", {
   }
 });
 
-// Define the props for the Grid component
-export type GridProps<C extends ElementType> = PolymorphicComponentPropsWithRef<
+export type GridProps<C extends ElementType = "div"> = PolymorphicComponentPropsWithRef<
   C,
   VariantProps<typeof gridStyles> & {
     rows?: number;
@@ -37,26 +35,24 @@ export type GridProps<C extends ElementType> = PolymorphicComponentPropsWithRef<
 
 export type GridComponent = <C extends ElementType = "div">(props: GridProps<C>) => ReactElement | null;
 
-// Create the Grid component
-export const Grid: GridComponent = forwardRef(
-  <C extends ElementType = "div">({ as, children, gap, direction, rows, cols, className, ...props }: GridProps<C>, ref?: PolymorphicRef<C>) => {
-    const Component = as || "div";
-    console.log("direction :>> ", direction);
-    console.log("rows :>> ", rows);
+export const Grid: GridComponent = forwardRef(function Grid<C extends ElementType = "div">(
+  { as, children, gap, direction, rows, cols, className, ...props }: GridProps<C>,
+  ref: Ref<HTMLDivElement>
+) {
+  const Component = as || "div";
 
-    return (
-      <Component
-        className={cn(
-          gridStyles({ gap, direction }),
-          direction === "row" && rows && `grid-rows-${rows}`,
-          direction === "column" && cols && `grid-cols-${cols}`,
-          className
-        )}
-        {...props}
-        ref={ref}
-      >
-        {children}
-      </Component>
-    );
-  }
-) as GridComponent;
+  return (
+    <Component
+      className={cn(
+        gridStyles({ gap, direction }),
+        direction === "row" && rows && `grid-rows-${rows}`,
+        direction === "column" && cols && `grid-cols-${cols}`,
+        className
+      )}
+      {...props}
+      ref={ref}
+    >
+      {children}
+    </Component>
+  );
+}) as GridComponent;

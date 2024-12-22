@@ -1,9 +1,8 @@
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "../../utils/utils";
-import { ElementType, forwardRef, ReactElement } from "react";
-import { PolymorphicComponentPropsWithRef, PolymorphicRef } from "../../utils/polmorphicsTypes";
+import { ElementType, forwardRef, ReactElement, Ref } from "react";
+import { PolymorphicComponentPropsWithRef } from "../../utils/polmorphicsTypes";
 
-// Define styles with cva
 const stackStyles = cva("flex w-full", {
   variants: {
     gap: {
@@ -46,23 +45,19 @@ const stackStyles = cva("flex w-full", {
   }
 });
 
-// Define the props for the Stack component
-export type StackProps<C extends ElementType> = PolymorphicComponentPropsWithRef<C, VariantProps<typeof stackStyles>>;
+export type StackProps<C extends ElementType = "div"> = PolymorphicComponentPropsWithRef<C, VariantProps<typeof stackStyles>>;
 
 export type StackComponent = <C extends ElementType = "div">(props: StackProps<C>) => ReactElement | null;
 
-// Create the Stack component
-export const Stack: StackComponent = forwardRef(
-  <C extends ElementType = "div">(
-    { as, children, gap, direction, align, alignContent, className, ...props }: StackProps<C>,
-    ref?: PolymorphicRef<C>
-  ) => {
-    const Component = as || "div";
+export const Stack: StackComponent = forwardRef(function Stack<C extends ElementType = "div">(
+  { as, children, gap, direction, align, alignContent, className, ...props }: StackProps<C>,
+  ref: Ref<HTMLDivElement>
+) {
+  const Component = as || "div";
 
-    return (
-      <Component className={cn(stackStyles({ gap, direction, align, alignContent }), className)} {...props} ref={ref}>
-        {children}
-      </Component>
-    );
-  }
-) as StackComponent;
+  return (
+    <Component className={cn(stackStyles({ gap, direction, align, alignContent }), className)} {...props} ref={ref}>
+      {children}
+    </Component>
+  );
+}) as StackComponent;
