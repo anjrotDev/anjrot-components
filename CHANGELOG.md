@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/anjrotDev/anjrot-components/compare/v1.15.3...v2.0.0) (2024-12-22)
+
+
+### Features
+
+* **upgrating:** upgrating ([25f65aa](https://github.com/anjrotDev/anjrot-components/commit/25f65aaf0606d07d14876af939d1607f30780eef))
+
+
+### BREAKING CHANGES
+
+* **upgrating:** upgrating
+
 ## [1.15.3](https://github.com/anjrotDev/anjrot-components/compare/v1.15.2...v1.15.3) (2024-12-21)
 
 
