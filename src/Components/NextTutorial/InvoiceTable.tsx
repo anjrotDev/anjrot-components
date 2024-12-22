@@ -21,18 +21,10 @@ export interface InvoiceTableProps extends HTMLAttributes<HTMLDivElement> {
     className: string;
   };
   ButtonElement?: ElementType;
-  deleteAction?: string | undefined;
+  deleteAction?: (formData: FormData) => void;
 }
 
-export const InvoiceTable: FC<InvoiceTableProps> = ({
-  invoices,
-  ImgComponent = "img",
-  ButtonElement = "a",
-  deleteAction,
-  tableHeader,
-  className,
-  ...props
-}) => {
+export const InvoiceTable: FC<InvoiceTableProps> = ({ invoices, ImgComponent = "img", ButtonElement = "a", deleteAction, tableHeader, className, ...props }) => {
   return (
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
@@ -129,7 +121,7 @@ export const InvoiceTable: FC<InvoiceTableProps> = ({
                         ButtonType={ButtonElement}
                         href={`/dashboard/invoices/${invoice._id}/edit`}
                       />
-                      <form action={deleteAction}>
+                       <form action={deleteAction}>
                         <input type="hidden" value={invoice.id} name="invoiceId" />
                         <TableButtons icon="delete" className="rounded-md border p-2 hover:bg-gray-100" ButtonType={"button"} type="submit" />
                       </form>
