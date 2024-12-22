@@ -1,7 +1,4 @@
-export type PropsOf<C extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<unknown>> = JSX.LibraryManagedAttributes<
-  C,
-  React.ComponentPropsWithoutRef<C>
->;
+export type PropsOf<C extends React.ElementType> = React.ComponentPropsWithRef<C>;
 
 type AsProp<C extends React.ElementType> = {
   /**
