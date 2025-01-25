@@ -48,7 +48,7 @@ const PaginationArrow: FC<PaginationArrowProps> = ({ direction, isDisabled, Anch
   return isDisabled ? (
     <div className={className}>{icon}</div>
   ) : (
-    <AnchorElement className={className} href={href} {...props}>
+    <AnchorElement className={className} href={href || "none"} {...props}>
       {icon}
     </AnchorElement>
   );

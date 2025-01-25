@@ -19,9 +19,9 @@ export interface LatestInvoicesProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const LatestInvoices: FC<LatestInvoicesProps> = forwardRef<HTMLDivElement, LatestInvoicesProps>(
-  ({ latestInvoices, ImgComponent = "img", footer, className, ...props }) => {
+  ({ latestInvoices, ImgComponent = "img", footer, className, ...props }, ref) => {
     return (
-      <div className={cn("flex grow flex-col justify-between rounded-xl bg-gray-50 p-4", className)} {...props}>
+      <div className={cn("flex grow flex-col justify-between rounded-xl bg-gray-50 p-4", className)} {...props} ref={ref}>
         <div className="bg-white px-6">
           {latestInvoices.map((invoice, i) => {
             return (
