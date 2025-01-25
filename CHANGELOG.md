@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/anjrotDev/anjrot-components/compare/v2.0.0...v2.0.1) (2025-01-25)
+
+
+### Bug Fixes
+
+* **Search Input Bug:** Fixing Search input bug ([7f04fbe](https://github.com/anjrotDev/anjrot-components/commit/7f04fbe86f0636a839d08618d1f651ec1f3c3db5))
+
 # [2.0.0](https://github.com/anjrotDev/anjrot-components/compare/v1.15.3...v2.0.0) (2024-12-22)
 
 
