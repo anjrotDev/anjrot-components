@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/anjrotDev/anjrot-components/compare/v2.1.1...v2.1.2) (2025-02-07)
+
+
+### Bug Fixes
+
+* **requiered:** removing required to the inputs ([447a36d](https://github.com/anjrotDev/anjrot-components/commit/447a36d176288fc1a5a7ab713c96220e0076faed))
+
 ## [2.1.1](https://github.com/anjrotDev/anjrot-components/compare/v2.1.0...v2.1.1) (2025-02-07)
 
 
