@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/anjrotDev/anjrot-components/compare/v2.0.1...v2.1.0) (2025-02-07)
+
+
+### Features
+
+* **Login Component:** Adding the login component for Next Tutorial! ([1685a85](https://github.com/anjrotDev/anjrot-components/commit/1685a853c128b5603eab8fb394592bd100eb1d1f))
+
 ## [2.0.1](https://github.com/anjrotDev/anjrot-components/compare/v2.0.0...v2.0.1) (2025-01-25)
 
 
