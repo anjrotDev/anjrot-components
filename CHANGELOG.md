@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/anjrotDev/anjrot-components/compare/v2.1.0...v2.1.1) (2025-02-07)
+
+
+### Bug Fixes
+
+* **disable button:** adding aria-disable to button ([55ca627](https://github.com/anjrotDev/anjrot-components/commit/55ca627ce6d6012807aa46c4567153ce9c2a1f89))
+
 # [2.1.0](https://github.com/anjrotDev/anjrot-components/compare/v2.0.1...v2.1.0) (2025-02-07)
 
 
