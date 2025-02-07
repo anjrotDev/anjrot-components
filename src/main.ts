@@ -13,6 +13,7 @@ export { InvoiceTable } from "./Components/NextTutorial/InvoiceTable";
 export { Pagination } from "./Components/NextTutorial/Pagination";
 export { Breadcrumbs } from "./Components/NextTutorial/Breadcrumb";
 export { CreateForm } from "./Components/NextTutorial/CreateForm";
+export { LoginForm } from "./Components/NextTutorial/LoginForm";
 
 // Export types if needed
 export type { ButtonProps } from "./Components/Button/Button";
