@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/anjrotDev/anjrot-components/compare/v2.1.2...v2.1.3) (2025-02-08)
+
+
+### Bug Fixes
+
+* **callbackurl:** fixing error with the callback url property ([331373a](https://github.com/anjrotDev/anjrot-components/commit/331373a8e3885258d73a2e80f1d5b7ee281dd393))
+
 ## [2.1.2](https://github.com/anjrotDev/anjrot-components/compare/v2.1.1...v2.1.2) (2025-02-07)
 
 
