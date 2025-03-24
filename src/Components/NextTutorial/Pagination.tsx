@@ -94,7 +94,7 @@ export const Pagination: FC<PaginationProps> = ({
 
             return (
               <PaginationNumber
-                key={page}
+                key={`${index}-${page}`}
                 href={createPageURL(page)}
                 page={page}
                 position={position}
