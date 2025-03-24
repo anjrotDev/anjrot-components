@@ -1,3 +1,10 @@
+## [2.1.4](https://github.com/anjrotDev/anjrot-components/compare/v2.1.3...v2.1.4) (2025-03-24)
+
+
+### Bug Fixes
+
+* **pagination:** create key using page and index ([188e71d](https://github.com/anjrotDev/anjrot-components/commit/188e71d2bea3e2e845794d6f18e52e7dc7ab2b69))
+
 ## [2.1.3](https://github.com/anjrotDev/anjrot-components/compare/v2.1.2...v2.1.3) (2025-02-08)
 
 
